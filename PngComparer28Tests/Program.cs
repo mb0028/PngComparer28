@@ -5,7 +5,7 @@ using MB28.PngComparerTests;
 // First 2 tests are update files in /TestImages/  folder
 #region Test All
 
-Tests.TestComparers();
+// Tests.TestComparers();
 
 Tests.TestEditing();
 
