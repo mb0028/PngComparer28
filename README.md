@@ -96,10 +96,10 @@ List of all available Editing methods:
 Method / Extension | Output |
 :------: | :------: |
 | Resizers.Bilinear(ref image, new(1000, 1000)) | <img src="TestImages/Photo_BilinearResizeTo1000x1000.png" height=100 /> |
-| Pixel32[].Brightness(0.5f) | <img src="TestImages/Photo_Adjustment_Brightness.png" height=100 /> |
-| Pixel32[].Contrast(0.5f) | <img src="TestImages/Photo_Adjustment_Contrast.png" height=100 /> |
-| Pixel32[].Saturation(0.5f) | <img src="TestImages/Photo_Adjustment_Saturation.png" height=100 /> |
-| Pixel32[].Vibrance(0.5f) | <img src="TestImages/Photo_Adjustment_Vibrance.png" height=100 /> |
+| Pixel32[].Brightness(0.5f) | <img src="TestImages/Photo_Adjustment_BrightnessAdd.png" height=100 /> |
+| Pixel32[].Contrast(0.5f) | <img src="TestImages/Photo_Adjustment_ContrastAdd.png" height=100 /> |
+| Pixel32[].Saturation(0.5f) | <img src="TestImages/Photo_Adjustment_SaturationAdd.png" height=100 /> |
+| Pixel32[].Vibrance(0.5f) | <img src="TestImages/Photo_Adjustment_VibranceAdd.png" height=100 /> |
 | Pixel32[].BW() | <img src="TestImages/Photo_BW.png" height=100 /> |
 | Pixel32[].Grayscale() |  <img src="TestImages/Photo_BW.png" height=100 /> |
 | Pixel32[].InvertColors() | <img src="TestImages/Photo_Inverted.png" height=100 /> |

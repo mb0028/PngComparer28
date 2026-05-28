@@ -56,7 +56,7 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
-PngComparer28/obj/*
-PngComparer28/bin/*
-PngComparer28Tests/obj/*
-PngComparer28Tests/bin/*
+PngComparer28/obj/
+PngComparer28/bin/
+PngComparer28Tests/obj/
+PngComparer28Tests/bin/
