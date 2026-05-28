@@ -1,0 +1,3 @@
+Compared C:\Users\mb28\Desktop\PngComparer28\TestImages/Photo.png
+with C:\Users\mb28\Desktop\PngComparer28\TestImages/Photo3.png
+Matchs: False | MatchPercentage: 53.75%

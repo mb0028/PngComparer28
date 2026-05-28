@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Open, read, edit, compare and create PNG images</Description>
+    <RepositoryUrl>https://github.com/mb0028/PngComparer28</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/mb0028/PngComparer28</PackageProjectUrl>
+    <Version>0.10.0</Version>
+  </PropertyGroup>
+
+  <!-- <ItemGroup>
+      <CopyToOutputDir>
+  </ItemGroup> -->
+
+</Project>
