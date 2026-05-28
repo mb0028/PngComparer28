@@ -101,7 +101,7 @@ Method / Extension | Output |
 | Pixel32[].Saturation(0.5f) | <img src="TestImages/Photo_Adjustment_SaturationAdd.png" height=100 /> |
 | Pixel32[].Vibrance(0.5f) | <img src="TestImages/Photo_Adjustment_VibranceAdd.png" height=100 /> |
 | Pixel32[].BW() | <img src="TestImages/Photo_BW.png" height=100 /> |
-| Pixel32[].Grayscale() |  <img src="TestImages/Photo_BW.png" height=100 /> |
+| Pixel32[].Grayscale() |  <img src="TestImages/Photo_Grayscale.png" height=100 /> |
 | Pixel32[].InvertColors() | <img src="TestImages/Photo_Inverted.png" height=100 /> |
 | Pixel32[].ColorOverlay(Pixel32.Red) | <img src="TestImages/Photo_ColorOverlay.png" height=100 /> |
 | Pixel32[].Bloom() | <img src="TestImages/Photo_Bloom.png" height=100 /> |
