@@ -95,7 +95,7 @@ List of all available Editing methods:
 
 Method / Extension | Output |
 :------: | :------: |
-| Pixel32[,].Bilinear(new(1000, 1000)) | <img src="TestImages/Photo_BilinearResizeTo1000x1000.png" height=100 /> |
+| Resizers.Bilinear(ref image, new(1000, 1000)) | <img src="TestImages/Photo_BilinearResizeTo1000x1000.png" height=100 /> |
 | Pixel32[].Brightness(0.5f) | <img src="TestImages/Photo_Adjustment_Brightness.png" height=100 /> |
 | Pixel32[].Contrast(0.5f) | <img src="TestImages/Photo_Adjustment_Contrast.png" height=100 /> |
 | Pixel32[].Saturation(0.5f) | <img src="TestImages/Photo_Adjustment_Saturation.png" height=100 /> |
