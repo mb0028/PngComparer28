@@ -37,7 +37,7 @@ internal static partial class Tests
         File.WriteAllBytes($"{imagesDir}/{fileName}_FrostedGlassBlur.png", glassBlurBuilder.Save());
 
         Pixel32[,] glare = portrait.GetPixels().To2dArray(portrait.SizeP);
-        glare.Bloom(out Pixel32[,] bl, 215);
+        glare.Bloom(out Pixel32[,] bl, 200);
         var glareBuilder = PngBuilder.FromPixel32_2d(glare, portrait.HasAlphaChannel);
         File.WriteAllBytes($"{imagesDir}/{fileName}_Bloom.png", glareBuilder.Save());
         var glareLayerBuilder = PngBuilder.FromPixel32_2d(bl, portrait.HasAlphaChannel);

@@ -23,8 +23,6 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
-PngComparer28/obj/
-
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -57,3 +55,8 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+PngComparer28/obj/*
+PngComparer28/bin/*
+PngComparer28Tests/obj/*
+PngComparer28Tests/bin/*

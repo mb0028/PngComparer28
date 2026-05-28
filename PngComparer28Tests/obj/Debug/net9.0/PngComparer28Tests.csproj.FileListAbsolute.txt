@@ -16,3 +16,4 @@ c:\Users\mb28\Desktop\PngComparer28\PngComparer28Tests\obj\Debug\net9.0\refint\P
 c:\Users\mb28\Desktop\PngComparer28\PngComparer28Tests\obj\Debug\net9.0\PngComparer28Tests.pdb
 c:\Users\mb28\Desktop\PngComparer28\PngComparer28Tests\obj\Debug\net9.0\PngComparer28Tests.genruntimeconfig.cache
 c:\Users\mb28\Desktop\PngComparer28\PngComparer28Tests\obj\Debug\net9.0\ref\PngComparer28Tests.dll
+c:\Users\mb28\Desktop\PngComparer28\PngComparer28Tests\obj\Debug\net9.0\PngComparer28Tests.sourcelink.json

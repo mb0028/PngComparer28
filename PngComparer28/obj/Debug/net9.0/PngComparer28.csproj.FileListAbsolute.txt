@@ -9,3 +9,4 @@ c:\Users\mb28\Desktop\PngComparer28\PngComparer28\obj\Debug\net9.0\PngComparer28
 c:\Users\mb28\Desktop\PngComparer28\PngComparer28\obj\Debug\net9.0\refint\PngComparer28.dll
 c:\Users\mb28\Desktop\PngComparer28\PngComparer28\obj\Debug\net9.0\PngComparer28.pdb
 c:\Users\mb28\Desktop\PngComparer28\PngComparer28\obj\Debug\net9.0\ref\PngComparer28.dll
+c:\Users\mb28\Desktop\PngComparer28\PngComparer28\obj\Debug\net9.0\PngComparer28.sourcelink.json

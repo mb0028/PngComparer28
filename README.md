@@ -104,6 +104,7 @@ Method / Extension | Output |
 | Pixel32[].Grayscale() |  <img src="TestImages/Photo_BW.png" height=100 /> |
 | Pixel32[].InvertColors() | <img src="TestImages/Photo_Inverted.png" height=100 /> |
 | Pixel32[].ColorOverlay(Pixel32.Red) | <img src="TestImages/Photo_ColorOverlay.png" height=100 /> |
+| Pixel32[].Bloom() | <img src="TestImages/Photo_Bloom.png" height=100 /> |
 | Pixel32[,].GaussianBlur() | <img src="TestImages/Photo_GaussianBlur.png" height=100 /> |
 | Pixel32[,].KawaseBlur() | <img src="TestImages/Photo_KawaseBlur.png" height=100 /> |
 | Pixel32[,].FrostedGlassBlur() | <img src="TestImages/Photo_FrostedGlassBlur.png" height=100 /> |
