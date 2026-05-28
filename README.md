@@ -37,13 +37,18 @@ Pixel32 clamped = new Pixel32(1100, 50, -10).Clamp(); // Result: (255, 50, 0)
 
 ### Comparing
 
-Fast Comparing using Intersection over union
 ```csharp
-var result = ImageComparer.IOU.CompareFast("../Image1.png", "../Image2.png");
-Console.WriteLine($"Matchs: {result.Matchs} | MatchPercentage: {result.MatchPercentage * 100f}%");
+
+// Comparing using structural similarity index measure (SSIM)
+double resultSSIM = ImageComparer.CompareSSIM("Image1.png", "Image2.png");
+Console.WriteLine($"MatchPercentage: {resultSSIM * 100}%");
+
+// Fast Comparing using Intersection over union. returns true if images are similar
+bool rIOU = ImageComparer.CompareIOUFast("Image1.png", "Image2.png", out float match);
+Console.WriteLine($"Matchs: {rIOU} | MatchPercentage: {match * 100f}%");
+
 ```
-\
-Real comparing! Compare one image with multiple BWMasks using Intersection over union. returns best match percentage with it's mask:
+Real comparing! Compare one image with multiple BWMasks using Intersection over union.
 ```csharp
 // BWMask struct: Holds a readonly 256x256 Black and White Png
 // with a name for it to help image comparing result
@@ -53,18 +58,10 @@ BWMask[] bWMasks = [
     new BWMask(Png.Open("../Image3.png"), "Landscape at night"),
 ];
 
-var result = ImageComparer.IOU.Compare(Png.Open("../Image0.png"), bWMasks);
+bool result = ImageComparer.CompareIOU(Png.Open("../Image0.png"), bWMasks, out float bestMatchPerc, out BWMask bestMatchMask);
 Console.WriteLine($"Compared with {bWMasks.Length} masks:\n" +
-    $"Matchs: {result.Matchs} | Best Match Percentage: {result.BestMatchPercentage}\n" +
-    $"{result.BestMatchMask.MaskName}");
-// result.Matchs returns True if comparing matchs with at least one of input BWMasks
-// result.BestMatchMask returns BWMask struct for best match.
-```
-\
-Comparing using structural similarity index measure (SSIM):
-```csharp
-double result = ImageComparer.SSIM.Compare("../Image1.png", "../Image2.png");
-Console.WriteLine($"Similarity: {result}");
+    $"Matchs: {result} | Best Match Percentage: {bestMatchPerc}\n" +
+    $"{bestMatchMask.MaskName}");
 ```
 \
 Currently, there are only 2 comparing algorithms:

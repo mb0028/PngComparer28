@@ -1,4 +1,3 @@
-
 using MB28.PngComparer;
 
 namespace MB28.PngComparerTests;
