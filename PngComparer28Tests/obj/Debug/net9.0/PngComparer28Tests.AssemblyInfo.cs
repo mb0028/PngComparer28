@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PngComparer28Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4fe3166c208a14d1535ca31351cca3db2eec76b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24422042071750e7b11a342e2979d947e575e317")]
 [assembly: System.Reflection.AssemblyProductAttribute("PngComparer28Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PngComparer28Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Open, read, edit, compare and create PNG images")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.10.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.10.0+f4fe3166c208a14d1535ca31351cca3db2eec76b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.10.0+24422042071750e7b11a342e2979d947e575e317")]
 [assembly: System.Reflection.AssemblyProductAttribute("PngComparer28")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PngComparer28")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.10.0.0")]
