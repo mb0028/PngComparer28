@@ -1,7 +1,6 @@
 using MB28.PngComparer.Image;
 using MB28.PngComparer.Drawing;
 using MB28.PngComparer.Photography;
-using System.Diagnostics;
 
 namespace MB28.PngComparer;
 

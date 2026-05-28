@@ -97,9 +97,14 @@ internal static partial class Tests
         File.WriteAllBytes($"{imagesDir}/{fileName}_Adjustment_SaturationAdd.png", satuBuilder.Save());
 
         Pixel32[] vibranceAdd = portrait.GetPixels();
-        vibranceAdd.Vibrance(0.5f);
+        vibranceAdd.Vibrance(1.5f);
         var vibranceBuilder = PngBuilder.FromPixel32_2d(vibranceAdd.To2dArray(portrait.SizeP), portrait.HasAlphaChannel);
         File.WriteAllBytes($"{imagesDir}/{fileName}_Adjustment_VibranceAdd.png", vibranceBuilder.Save());
+
+        Pixel32[] gammaAdd = portrait.GetPixels();
+        gammaAdd.Gamma(0.5f);
+        var gammaBuilder = PngBuilder.FromPixel32_2d(gammaAdd.To2dArray(portrait.SizeP), portrait.HasAlphaChannel);
+        File.WriteAllBytes($"{imagesDir}/{fileName}_Adjustment_GammaAdd.png", gammaBuilder.Save());
 
         for (int i = 0; i < 6; i++) {
             var blendingBuilder = PngBuilder.FromPng(Blend($"{imagesDir}/{fileName}.png", $"{imagesDir}/{fileName}3.png", (BlendingMode)i));

@@ -46,6 +46,10 @@ public struct Pixel32 : IEquatable<Pixel32>
         IsGrayscale = isGrayscale;
     }
 
+    public Pixel32(long v) : this()
+    {
+    }
+
     /// <summary> Pixel32 with (0, 0, 0, 0) values </summary>
     public static Pixel32 Transparent => new(0, 0, 0, 0);
 

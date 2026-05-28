@@ -9,7 +9,7 @@ using MB28.PngComparerTests;
 
 Tests.TestEditing();
 
-Tests.TestTagGenerator();
+// Tests.TestTagGenerator();
 
 // Tests.Pixel32MathAndOperations();
 

@@ -99,7 +99,8 @@ Method / Extension | Output |
 | Pixel32[].Brightness(0.5f) | <img src="TestImages/Photo_Adjustment_BrightnessAdd.png" height=100 /> |
 | Pixel32[].Contrast(0.5f) | <img src="TestImages/Photo_Adjustment_ContrastAdd.png" height=100 /> |
 | Pixel32[].Saturation(0.5f) | <img src="TestImages/Photo_Adjustment_SaturationAdd.png" height=100 /> |
-| Pixel32[].Vibrance(0.5f) | <img src="TestImages/Photo_Adjustment_VibranceAdd.png" height=100 /> |
+| Pixel32[].Vibrance(1.5f) | <img src="TestImages/Photo_Adjustment_VibranceAdd.png" height=100 /> |
+| Pixel32[].Gamma(0.5f) | <img src="TestImages/Photo_Adjustment_GammaAdd.png" height=100 /> |
 | Pixel32[].BW() | <img src="TestImages/Photo_BW.png" height=100 /> |
 | Pixel32[].Grayscale() |  <img src="TestImages/Photo_Grayscale.png" height=100 /> |
 | Pixel32[].InvertColors() | <img src="TestImages/Photo_Inverted.png" height=100 /> |

@@ -2,10 +2,12 @@ using MB28.PngComparer.Image;
 
 namespace MB28.PngComparer.Tags;
 
+/// <summary> TODO: Add summary </summary>
 public static class Tag
 {
     internal const int CM = 45, CX = 175;
 
+    /// <summary> TODO: Add summary </summary>
     public static IList<string> GenerateTags(Png png)
     {
         List<string> tags = [];
