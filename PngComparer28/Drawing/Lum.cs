@@ -14,7 +14,7 @@ public abstract class Lum
     /// <summary> TODO: Add summary </summary>
     public const float B = 0.0722f;
 
-
+    public static float Brightness(Pixel32 p) => p.R * R + p.G * G + p.B * B;
 
     /// <summary> TODO: Add summary </summary>
     public static byte R8 => (byte)MathP.Lerp(0, 255, R);

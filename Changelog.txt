@@ -1,2 +1,6 @@
+v0.1.1.0-beta
++ Add Shadows, Midtones & Highlights adjustments
++ Add Posterize filter
+
 v0.1.0.0-beta
 + First release!

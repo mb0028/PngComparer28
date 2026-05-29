@@ -91,6 +91,7 @@ See original [BigGustave repository](https://github.com/EliotJones/BigGustave) f
 List of all available Editing methods:
 
 **Input image**:
+\
 <img src="TestImages/Photo.png" height=100 />
 
 Method / Extension | Output |
@@ -101,11 +102,13 @@ Method / Extension | Output |
 | Pixel32[].Saturation(0.5f) | <img src="TestImages/Photo_Adjustment_SaturationAdd.png" height=100 /> |
 | Pixel32[].Vibrance(1.5f) | <img src="TestImages/Photo_Adjustment_VibranceAdd.png" height=100 /> |
 | Pixel32[].Gamma(0.5f) | <img src="TestImages/Photo_Adjustment_GammaAdd.png" height=100 /> |
+| Pixel32[].ShadowsMidtonesHighlights(0.2f, 0.7f, 1.2f) | <img src="TestImages/Photo_Adjustment_ShaMidHigh.png" height=100 /> |
 | Pixel32[].BW() | <img src="TestImages/Photo_BW.png" height=100 /> |
 | Pixel32[].Grayscale() |  <img src="TestImages/Photo_Grayscale.png" height=100 /> |
 | Pixel32[].InvertColors() | <img src="TestImages/Photo_Inverted.png" height=100 /> |
 | Pixel32[].ColorOverlay(Pixel32.Red) | <img src="TestImages/Photo_ColorOverlay.png" height=100 /> |
-| Pixel32[].Bloom() | <img src="TestImages/Photo_Bloom.png" height=100 /> |
+| Pixel32[].Posterize() | <img src="TestImages/Photo_Posterized.png" height=100 /> |
+| Pixel32[,].Bloom() (Need some fixes...) | <img src="TestImages/Photo_Bloom.png" height=100 /> |
 | Pixel32[,].GaussianBlur() | <img src="TestImages/Photo_GaussianBlur.png" height=100 /> |
 | Pixel32[,].KawaseBlur() | <img src="TestImages/Photo_KawaseBlur.png" height=100 /> |
 | Pixel32[,].FrostedGlassBlur() | <img src="TestImages/Photo_FrostedGlassBlur.png" height=100 /> |
@@ -121,6 +124,7 @@ BlendingUtils.Blend(string imagePath, string image2Path, BlendingMode blendingMo
 BlendingUtils.Blend(Png png, Png png2, BlendingMode blendingMode);
 ```
 **Input images**:
+\
 <img src="TestImages/Photo.png" height=100 /> <img src="TestImages/Photo3.png" height=100 />
 
 BlendingMode | Output |
@@ -140,7 +144,7 @@ More editing methods and blending modes are coming soon!
 
 - [ ] Support Jpg/Jpeg (by encoding it to png right after load)
 - [ ] Edge detecting
-- [ ] More Adjustments (Like hue, gamma, shadows, midtones, highlights, ~~color overlay~~ and more)
+- [x] ~~More Adjustments (Like hue, gamma, shadows, midtones, highlights, color overlay and more)~~
 - [ ] Implement Lens Blur method
 - [ ] Add spiral and radial blur
 - [ ] Add wiki tab with guide for every method and struct

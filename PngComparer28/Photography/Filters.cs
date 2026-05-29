@@ -13,7 +13,8 @@ public static class Filters
     /// <summary> Applies Black and White Filter </summary>
 	public static void BW(this Pixel32[] pixel32s, float threshold = 0.5f)
     {
-        pixel32s.ForEach(i => {
+        pixel32s.ForEach(i =>
+        {
             Pixel32 p = pixel32s[i];
             int c = (p.R * Lum.R + p.G * Lum.G + p.B * Lum.B) / 255f > threshold ? 255 : 0;
             return new(c, c, c, 255);
@@ -26,7 +27,8 @@ public static class Filters
     /// of the coefficient 0.299</remarks>
 	public static void Grayscale(this Pixel32[] pixel32s)
     {
-        pixel32s.ForEach(i => {
+        pixel32s.ForEach(i =>
+        {
             Pixel32 p = pixel32s[i];
             int gs = (int)(0.2989f * p.R + 0.5870f * p.G + 0.1140f * p.B);
             return new Pixel32(gs, gs, gs, p.A).Clamp();
@@ -50,5 +52,47 @@ public static class Filters
     /// <summary> TODO: Add summary </summary>
     public static void ColorOverlay(this Pixel32[] pixel32s, System.Drawing.Color color)
         => pixel32s.ColorOverlay(new Pixel32(color.R, color.G, color.B, color.A));
-    
+
+    /// <summary> TODO: Add summary </summary>
+    public static void Posterize(this Pixel32[] pixel32s, int colors = 4, int colorfulness = 100)
+    {
+        Pixel32 accent = pixel32s.GetAccentColor();
+        int[] thr = new int[colors];
+        Pixel32[] cols = new Pixel32[colors];
+        for (int a = 0; a < colors; a++)
+        {
+            thr[a] = 255 / colors * a;
+            cols[a] = new Pixel32(accent.R + (colorfulness / colors * a),
+                accent.G + (colorfulness / colors * a),
+                accent.B + (colorfulness / colors * a),
+                255).Clamp();
+        }
+
+        pixel32s.ForEach(i =>
+        {
+            Pixel32 p = pixel32s[i];
+            float lum = Lum.Brightness(p);
+
+            for (int a = 0; a < colors - 1; a++)
+            {
+                if (lum < thr[a])
+                {
+                    p = cols[0];
+                    break;
+                }
+                if (lum > thr[colors - 1])
+                {
+                    p = cols[colors - 1];
+                    break;
+                }
+                if (lum >= thr[a] && lum < thr[a + 1])
+                {
+                    p = cols[a];
+                    break;
+                }
+            }
+            return p;
+        });
+    }
+
 }

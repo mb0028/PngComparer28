@@ -98,12 +98,31 @@ public static class Adjustments
         }
 
         int add = (int)(addPerc * 255);
-        p.ForEach(i => {
+        p.ForEach(i =>
+        {
             Pixel32 pixel = p[i];
             return new Pixel32((int)(pixel.R + ((pixel.R - pow[pixel.R]) * add / 255f)),
                 (int)(pixel.G + ((pixel.G - pow[pixel.G]) * add / 255f)),
                 (int)(pixel.B + ((pixel.B - pow[pixel.B]) * add / 255f)),
                 pixel.A).Clamp();
+        });
+    }
+
+    public static void ShadowsMidtonesHighlights(this Pixel32[] p, float shadows = 1.0f, float midtones = 1.0f, float highlights = 1.0f)
+    {
+        p.ForEach(i =>
+        {
+            Pixel32 pixel = p[i];
+            float brightness = Lum.Brightness(pixel);
+
+            if (brightness < 80)
+                pixel = new Pixel32((int)(pixel.R * shadows), (int)(pixel.G * shadows), (int)(pixel.B * shadows), pixel.A);
+            else if (brightness > 80 && brightness < 175)
+                pixel = new Pixel32((int)(pixel.R * midtones), (int)(pixel.G * midtones), (int)(pixel.B * midtones), pixel.A);
+            else if (brightness > 175)
+                pixel = new Pixel32((int)(pixel.R * highlights), (int)(pixel.G * highlights), (int)(pixel.B * highlights), pixel.A);
+
+            return pixel.Clamp();
         });
     }
 

@@ -14,13 +14,6 @@ internal static partial class Tests
         var portrait = Png.Open($"{imagesDir}/{fileName}.png");
 
         // ------------------------------------------------------------
-        // Coping ------------------------------------------------------------
-        Pixel32[] copy = portrait.GetPixels().To2dArray(portrait.SizeP).BackTo1dArray();
-        var copyBuilder = PngBuilder.FromPixel32_2d(copy.To2dArray(portrait.SizeP), portrait.HasAlphaChannel);
-        File.WriteAllBytes($"{imagesDir}/{fileName}_Copy.png", copyBuilder.Save());
-
-
-        // ------------------------------------------------------------
         // Blurs ------------------------------------------------------------
         Pixel32[,] blur = portrait.GetPixels().To2dArray(portrait.SizeP);
         blur.GaussianBlur();
@@ -70,6 +63,11 @@ internal static partial class Tests
         var colorOverlayBuilder = PngBuilder.FromPixel32_2d(colorOverlay.To2dArray(portrait.SizeP), portrait.HasAlphaChannel);
         File.WriteAllBytes($"{imagesDir}/{fileName}_ColorOverlay.png", colorOverlayBuilder.Save());
 
+        Pixel32[] posterize = portrait.GetPixels();
+        posterize.Posterize(4);
+        var posterizeBuilder = PngBuilder.FromPixel32_2d(posterize.To2dArray(portrait.SizeP), portrait.HasAlphaChannel);
+        File.WriteAllBytes($"{imagesDir}/{fileName}_Posterized.png", posterizeBuilder.Save());
+
 
         // ------------------------------------------------------------
         // Resizers ------------------------------------------------------------
@@ -105,6 +103,11 @@ internal static partial class Tests
         gammaAdd.Gamma(0.5f);
         var gammaBuilder = PngBuilder.FromPixel32_2d(gammaAdd.To2dArray(portrait.SizeP), portrait.HasAlphaChannel);
         File.WriteAllBytes($"{imagesDir}/{fileName}_Adjustment_GammaAdd.png", gammaBuilder.Save());
+
+        Pixel32[] smh = portrait.GetPixels();
+        smh.ShadowsMidtonesHighlights(0.2f, 0.7f, 1.2f);
+        var smhBuilder = PngBuilder.FromPixel32_2d(smh.To2dArray(portrait.SizeP), portrait.HasAlphaChannel);
+        File.WriteAllBytes($"{imagesDir}/{fileName}_Adjustment_ShaMidHigh.png", smhBuilder.Save());
 
         for (int i = 0; i < 6; i++) {
             var blendingBuilder = PngBuilder.FromPng(Blend($"{imagesDir}/{fileName}.png", $"{imagesDir}/{fileName}3.png", (BlendingMode)i));
