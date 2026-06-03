@@ -4,7 +4,7 @@ namespace MB28.PngComparerTests;
 
 internal static partial class Tests
 {
-    static readonly string imagesDir = @"C:\Users\mb28\Desktop\PngComparer28\TestImages";
+    static readonly string imagesDir = @"E:\PngComparer28\TestImages";
     static readonly string fileName = "Photo";
 
     public static void TestComparers()

@@ -108,6 +108,7 @@ public static class Adjustments
         });
     }
 
+    /// <summary> Change image's shadows, midtones & highlights </summary>
     public static void ShadowsMidtonesHighlights(this Pixel32[] p, float shadows = 1.0f, float midtones = 1.0f, float highlights = 1.0f)
     {
         p.ForEach(i =>
@@ -126,4 +127,14 @@ public static class Adjustments
         });
     }
 
+    /// <summary> Change image's hue </summary>
+    /// <param name="addPerc"> from -1.0 to 2.0 </param>
+    public static void Hue(this Pixel32[] p, float offset)
+    {
+        p.ForEach(i =>
+        {
+            Pixel32 pixel = p[i];
+            return new Pixel32().Clamp();
+        });
+    }
 }
