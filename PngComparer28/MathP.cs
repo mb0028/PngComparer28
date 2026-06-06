@@ -1,7 +1,7 @@
 namespace MB28.PngComparer;
 
 /// <summary> Common maths that System.Math and System.MathF doesn't have them. </summary>
-public static class MathP
+public struct MathP
 {
     public static float Lerp(float a, float b, float t) => a + (b - a) * Clamp01(t);
 
