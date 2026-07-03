@@ -9,11 +9,19 @@
     <Description>Open, read, edit, compare and create PNG images</Description>
     <RepositoryUrl>https://github.com/mb0028/PngComparer28</RepositoryUrl>
     <PackageProjectUrl>https://github.com/mb0028/PngComparer28</PackageProjectUrl>
-    <Version>0.1.1.0</Version>
+    <Version>0.1.1.1</Version>
+    <UserSecretsId>99f8b1e6-e3d8-4918-818f-160c7d97ab96</UserSecretsId>
+    <PackageReadmeFile>README_NuGet.md</PackageReadmeFile>
+    <PackageId>mb28.PngComparer28</PackageId>
+    <Title>PngComparer28</Title>
+    <Authors>mb28</Authors>
   </PropertyGroup>
 
-  <!-- <ItemGroup>
-      <CopyToOutputDir>
-  </ItemGroup> -->
+  <ItemGroup>
+    <None Include="..\README_NuGet.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

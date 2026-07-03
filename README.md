@@ -2,9 +2,9 @@
 
 A fork of [EliotJones/BigGustave](https://github.com/EliotJones/BigGustave) c# library with some changes + png comparing and editing functions.
 
+[NuGet Link](https://www.nuget.org/packages/mb28.PngComparer28)
+
 Feel free to help this project.
-\
-Also, I might make a dart version of this library in the future
 
 ---
 

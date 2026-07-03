@@ -23,6 +23,8 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+.vs/
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -60,3 +62,4 @@ PngComparer28/obj/
 PngComparer28/bin/
 PngComparer28Tests/obj/
 PngComparer28Tests/bin/
+notes.txt
