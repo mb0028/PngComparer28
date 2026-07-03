@@ -1,0 +1,4 @@
+﻿<Solution>
+  <Project Path="PngComparer28/PngComparer28.csproj" />
+  <Project Path="PngComparer28Tests/PngComparer28Tests.csproj" />
+</Solution>
