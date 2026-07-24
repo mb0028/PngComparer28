@@ -128,9 +128,9 @@ public static class Adjustments
     }
 
     /// <summary> Change image's hue </summary>
-    /// <param name="addPerc"> from -1.0 to 2.0 </param>
+    /// <param name="addPerc"> from -0 to 0 </param>
     public static void Hue(this Pixel32[] p, float offset)
-    {
+    { //TODO
         p.ForEach(i =>
         {
             Pixel32 pixel = p[i];
