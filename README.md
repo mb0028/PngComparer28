@@ -4,7 +4,7 @@ A fork of [EliotJones/BigGustave](https://github.com/EliotJones/BigGustave) c# l
 
 [NuGet Link](https://www.nuget.org/packages/mb28.PngComparer28)
 
-Feel free to help this project.
+News: I'm working on dart version of this library. it will be available on this repository when its ready and it will have every function c# version had.
 
 ---
 
